@@ -52,7 +52,7 @@ class Logger:
             fh_formatter = logging.Formatter(cls._FORMATTER)
             fh.setFormatter(fh_formatter)
             logger.addHandler(fh)
-        if Config.config["logging"]["console_log"].upper == "TRUE":
+        if Config.config["logging"]["console_log"].upper() == "TRUE":
             sh = logging.StreamHandler()
             sh_formatter = logging.Formatter(cls._FORMATTER)
             sh.setFormatter(sh_formatter)
